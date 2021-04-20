@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="/home">home</a>
+        <a href="/myfav">fav</a>
+    </header>
+    <main>
+        <section class="divcontainer">
+            <% data.forEach(data=>{ %>
+            <div>
+
+                <p><%= data.charactere %></p>
+                <p><%= data.quote %></p>
+                <p><%= data.characterDirection %></p>
+               <img src="<%= data.image_url %>" alt="">
+
+
+
+
+               <form action="/delete/<%= data.id %>?method=delete" method="post">
+                    <input type="submit" value="delete">
+            </form>
+
+               <form action="/update/<%= data.id %>?method=put" method="post">
+                <input type="hiddin" name="character" value="<%= data.charactere %>">
+                <input type="hiddin" name="quote" value="<%= data.quote %>">
+                <input type="hiddin" name="characterDirection" value="<%= data.characterDirection %>">
+                <input type="hiddin" name="image_url" value="<%= data.image_url %>">
+                <input type="submit" value="update">
+               </form>
+            </div>
+            <%})%>
+        </section>
+    </main>
+</body>
+</html>
