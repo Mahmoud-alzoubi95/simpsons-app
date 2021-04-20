@@ -15,6 +15,7 @@ div{
     border-radius:10px;
     margin: 20px;
     width: 350px;
+    box-shadow: 3px 3px 3px 3px #505050;
 }
 header{
     background-color: #62C8E4;
@@ -23,7 +24,7 @@ header{
     /* color:#fefb1e; */
     width: 100%;
     box-shadow: 4px 4px 4px;
-    
+    margin-top: 0px;
 }
 a{
 background-color: #62C8E4;
@@ -34,8 +35,8 @@ color: azure;
 text-align: center;
 }
 img{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
 form{
     width: 150px;
